@@ -11,7 +11,7 @@
         android:id="@+id/icon"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height"
-        android:contentDescription="@string/schurke_image_desc"/>
+        android:contentDescription="@string/schurke_image_desc" />
 
     <RelativeLayout
         android:id="@+id/text_container"

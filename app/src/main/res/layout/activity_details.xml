@@ -1,106 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/tan_background"
-    tools:context="com.kalash.superschurken.DetailsActivity">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
 
-    <!-- Name-Container -->
-    <LinearLayout
-        android:id="@+id/name_container"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@color/tan_background"
+        tools:context="com.kalash.superschurken.DetailsActivity">
 
-        <TextView
-            android:id="@+id/name"
-            android:text="@string/name"
-            android:labelFor="@+id/name_value"
-            android:layout_width="100dp"
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-22dp"
+            android:layout_marginEnd="-1dp"
+            android:contentDescription="@string/schurke_image_desc"
+            android:minHeight="350dp" />
+
+        <!-- Name-Container -->
+        <LinearLayout
+            android:id="@+id/name_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:textStyle="bold"
-            android:textAppearance="?android:textAppearanceListItemSmall"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_below="@+id/image"
+            android:layout_marginStart="20dp"
+            android:minHeight="35dp"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="name" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/name_value"
-            android:text="@string/no_value"
-            android:layout_width="100dp"
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/name_value"
+                android:text="@string/name"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="name" />
+
+            <TextView
+                android:id="@+id/name_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_value"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <!-- Alias-Container -->
+        <LinearLayout
+            android:id="@+id/alias_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:textAppearance="?android:textAppearanceListItemSmall"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/name" />
+            android:layout_below="@+id/name_container"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/alias"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/alias_value"
+                android:text="@string/alias"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="alias" />
 
-    <!-- Alias-Container -->
-    <LinearLayout
-        android:id="@+id/alias_container"
-        android:layout_below="@+id/name_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent" >
+            <TextView
+                android:id="@+id/alias_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_value"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/alias" />
 
-        <TextView
-            android:id="@+id/alias"
-            android:text="@string/alias"
-            android:labelFor="@+id/alias_value"
-            android:layout_width="100dp"
+        </LinearLayout>
+
+        <!-- Universum-Container -->
+        <LinearLayout
+            android:id="@+id/universum_container"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:textStyle="bold"
-            android:textAppearance="?android:textAppearanceListItemSmall"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="alias" />
-
-        <TextView
-            android:id="@+id/alias_value"
-            android:text="@string/no_value"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
-            android:textAppearance="?android:textAppearanceListItemSmall"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/alias" />
-
-    </LinearLayout>
-
-    <!-- Universum-Container -->
-    <LinearLayout
-        android:id="@+id/universum_container"
-        android:layout_below="@+id/alias_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent" >
+            android:layout_below="@+id/alias_container"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/universum"
-                android:text="@string/universe"
-                android:labelFor="@+id/universum_value"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:labelFor="@+id/universum_value"
+                android:text="@string/universe"
+                android:textAppearance="?android:textAppearanceListItemSmall"
                 android:textColor="@color/text_color"
                 android:textStyle="bold"
-                android:textAppearance="?android:textAppearanceListItemSmall"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="parent"
@@ -108,37 +125,37 @@
 
             <TextView
                 android:id="@+id/universum_value"
-                android:text="@string/no_value"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:text="@string/no_value"
                 android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/universum" />
+                app:layout_constraintStart_toEndOf="@+id/universum"
+                app:layout_constraintTop_toBottomOf="parent" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <!-- Rolle-Container -->
-    <LinearLayout
-        android:id="@+id/rolle_container"
-        android:layout_below="@+id/universum_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent" >
+        <!-- Rolle-Container -->
+        <LinearLayout
+            android:id="@+id/rolle_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/universum_container"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/rolle"
-                android:text="@string/role"
-                android:labelFor="@+id/rolle_value"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:labelFor="@+id/rolle_value"
+                android:text="@string/role"
+                android:textAppearance="?android:textAppearanceListItemSmall"
                 android:textColor="@color/text_color"
                 android:textStyle="bold"
-                android:textAppearance="?android:textAppearanceListItemSmall"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="parent"
@@ -146,37 +163,37 @@
 
             <TextView
                 android:id="@+id/rolle_value"
-                android:text="@string/no_value"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:text="@string/no_value"
                 android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/rolle" />
+                app:layout_constraintStart_toEndOf="@+id/rolle"
+                app:layout_constraintTop_toBottomOf="parent" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <!-- Fähigkeiten-Container -->
-    <LinearLayout
-        android:id="@+id/faehigkeiten_container"
-        android:layout_below="@+id/rolle_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent" >
+        <!-- Fähigkeiten-Container -->
+        <LinearLayout
+            android:id="@+id/faehigkeiten_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rolle_container"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/faehigkeiten"
-                android:text="@string/capabilities"
-                android:labelFor="@+id/faehigkeiten_value"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:labelFor="@+id/faehigkeiten_value"
+                android:text="@string/capabilities"
+                android:textAppearance="?android:textAppearanceListItemSmall"
                 android:textColor="@color/text_color"
                 android:textStyle="bold"
-                android:textAppearance="?android:textAppearanceListItemSmall"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="parent"
@@ -184,37 +201,38 @@
 
             <TextView
                 android:id="@+id/faehigkeiten_value"
-                android:text="@string/no_value"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:breakStrategy="high_quality"
+                android:text="@string/no_value"
                 android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/faehigkeiten" />
+                app:layout_constraintStart_toEndOf="@+id/faehigkeiten"
+                app:layout_constraintTop_toBottomOf="parent" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <!-- Hobby-Container -->
-    <LinearLayout
-        android:id="@+id/hobby_container"
-        android:layout_below="@+id/faehigkeiten_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent" >
+        <!-- Hobby-Container -->
+        <LinearLayout
+            android:id="@+id/hobby_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/faehigkeiten_container"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/hobby"
-                android:text="@string/hobby"
-                android:labelFor="@+id/hobby_value"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:labelFor="@+id/hobby_value"
+                android:text="@string/hobby"
+                android:textAppearance="?android:textAppearanceListItemSmall"
                 android:textColor="@color/text_color"
                 android:textStyle="bold"
-                android:textAppearance="?android:textAppearanceListItemSmall"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="parent"
@@ -222,37 +240,38 @@
 
             <TextView
                 android:id="@+id/hobby_value"
-                android:text="@string/no_value"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:breakStrategy="high_quality"
+                android:text="@string/no_value"
                 android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/hobby" />
+                app:layout_constraintStart_toEndOf="@+id/hobby"
+                app:layout_constraintTop_toBottomOf="parent" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <!-- Status-Container -->
-    <LinearLayout
-        android:id="@+id/status_container"
-        android:layout_below="@+id/hobby_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="35dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toStartOf="parent">
+        <!-- Status-Container -->
+        <LinearLayout
+            android:id="@+id/status_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hobby_container"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:minHeight="35dp"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/status"
-                android:text="@string/status"
-                android:labelFor="@+id/status_value"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
+                android:labelFor="@+id/status_value"
+                android:text="@string/status"
+                android:textAppearance="?android:textAppearanceListItemSmall"
                 android:textColor="@color/text_color"
                 android:textStyle="bold"
-                android:textAppearance="?android:textAppearanceListItemSmall"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="parent"
@@ -260,15 +279,16 @@
 
             <TextView
                 android:id="@+id/status_value"
-                android:text="@string/no_value"
-                android:layout_width="100dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_color"
+                android:text="@string/no_value"
                 android:textAppearance="?android:textAppearanceListItemSmall"
+                android:textColor="@color/text_color"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/status" />
+                app:layout_constraintStart_toEndOf="@+id/status"
+                app:layout_constraintTop_toBottomOf="parent" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
