@@ -24,16 +24,16 @@ public class SchurkeAdapter extends ArrayAdapter<Schurke> {
                     R.layout.list_item, parent, false);
         }
 
-        final Schurke currenSchurke = getItem(position);
+        final Schurke currentSchurke = getItem(position);
 
         TextView schurkeTextView = listItemView.findViewById(R.id.schurke_text_view);
 
-        schurkeTextView.setText(currenSchurke.getName());
+        schurkeTextView.setText(currentSchurke.getName());
 
-        ImageView imageView = listItemView.findViewById(R.id.image);
+        ImageView imageView = listItemView.findViewById(R.id.icon);
         
-        if (currenSchurke.hasImage()) {
-            imageView.setImageResource(currenSchurke.getImageResourceId());
+        if (currentSchurke.hasImage()) {
+            imageView.setImageResource(currentSchurke.getImageResourceId());
             imageView.setVisibility(View.VISIBLE);
         } else {
             imageView.setVisibility(View.GONE);

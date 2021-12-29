@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Superschurken</string>
+    <string name="name">Name</string>
+    <string name="alias">Alias</string>
+    <string name="universe">Universum</string>
+    <string name="role">Rolle</string>
+    <string name="capabilities">Fähigkeiten/Waffen</string>
+    <string name="hobby">Hobby</string>
+    <string name="status">Status</string>
+    <string name="schurke_image_desc">Schurke-Bild</string>
+    <string name="arrow_desc">Pfeil</string>
+    <string name="no_value">None</string>
 </resources>

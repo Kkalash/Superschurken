@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android-Projekte/intern/Superschurken/app/src/main/res/layout/activity_details.xml" value="0.33" />
+        <entry key="..\:/Android-Projekte/intern/Superschurken/app/src/main/res/layout/activity_main.xml" value="0.17831813576494426" />
+        <entry key="..\:/Android-Projekte/intern/Superschurken/app/src/main/res/layout/list_item.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Benutzer1/AndroidStudioProjects/Superschurken/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3828125" />
         <entry key="..\:/Users/Benutzer1/AndroidStudioProjects/Superschurken/app/src/main/res/layout/activity_main.xml" value="0.20018115942028986" />
         <entry key="..\:/Users/Benutzer1/AndroidStudioProjects/Superschurken/app/src/main/res/layout/list_item.xml" value="0.2427536231884058" />

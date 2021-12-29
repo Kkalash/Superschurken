@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tan_background"
+    tools:context="com.kalash.superschurken.DetailsActivity">
+
+    <!-- Name-Container -->
+    <LinearLayout
+        android:id="@+id/name_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:text="@string/name"
+            android:labelFor="@+id/name_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceListItemSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="name" />
+
+        <TextView
+            android:id="@+id/name_value"
+            android:text="@string/no_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textAppearance="?android:textAppearanceListItemSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/name" />
+
+    </LinearLayout>
+
+    <!-- Alias-Container -->
+    <LinearLayout
+        android:id="@+id/alias_container"
+        android:layout_below="@+id/name_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <TextView
+            android:id="@+id/alias"
+            android:text="@string/alias"
+            android:labelFor="@+id/alias_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textStyle="bold"
+            android:textAppearance="?android:textAppearanceListItemSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="alias" />
+
+        <TextView
+            android:id="@+id/alias_value"
+            android:text="@string/no_value"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textAppearance="?android:textAppearanceListItemSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/alias" />
+
+    </LinearLayout>
+
+    <!-- Universum-Container -->
+    <LinearLayout
+        android:id="@+id/universum_container"
+        android:layout_below="@+id/alias_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent" >
+
+            <TextView
+                android:id="@+id/universum"
+                android:text="@string/universe"
+                android:labelFor="@+id/universum_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:text="universum" />
+
+            <TextView
+                android:id="@+id/universum_value"
+                android:text="@string/no_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/universum" />
+
+    </LinearLayout>
+
+    <!-- Rolle-Container -->
+    <LinearLayout
+        android:id="@+id/rolle_container"
+        android:layout_below="@+id/universum_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent" >
+
+            <TextView
+                android:id="@+id/rolle"
+                android:text="@string/role"
+                android:labelFor="@+id/rolle_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:text="rolle" />
+
+            <TextView
+                android:id="@+id/rolle_value"
+                android:text="@string/no_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/rolle" />
+
+    </LinearLayout>
+
+    <!-- Fähigkeiten-Container -->
+    <LinearLayout
+        android:id="@+id/faehigkeiten_container"
+        android:layout_below="@+id/rolle_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent" >
+
+            <TextView
+                android:id="@+id/faehigkeiten"
+                android:text="@string/capabilities"
+                android:labelFor="@+id/faehigkeiten_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:text="fähigkeiten/waffe" />
+
+            <TextView
+                android:id="@+id/faehigkeiten_value"
+                android:text="@string/no_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/faehigkeiten" />
+
+    </LinearLayout>
+
+    <!-- Hobby-Container -->
+    <LinearLayout
+        android:id="@+id/hobby_container"
+        android:layout_below="@+id/faehigkeiten_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent" >
+
+            <TextView
+                android:id="@+id/hobby"
+                android:text="@string/hobby"
+                android:labelFor="@+id/hobby_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:text="hobby" />
+
+            <TextView
+                android:id="@+id/hobby_value"
+                android:text="@string/no_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hobby" />
+
+    </LinearLayout>
+
+    <!-- Status-Container -->
+    <LinearLayout
+        android:id="@+id/status_container"
+        android:layout_below="@+id/hobby_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/status"
+                android:text="@string/status"
+                android:labelFor="@+id/status_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:text="status" />
+
+            <TextView
+                android:id="@+id/status_value"
+                android:text="@string/no_value"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:textAppearance="?android:textAppearanceListItemSmall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/status" />
+
+    </LinearLayout>
+
+</RelativeLayout>
