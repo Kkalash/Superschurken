@@ -28,7 +28,7 @@ public class SchurkeAdapter extends ArrayAdapter<Schurke> {
 
         TextView schurkeTextView = listItemView.findViewById(R.id.schurke_text_view);
 
-        schurkeTextView.setText(currentSchurke.getName());
+        schurkeTextView.setText(currentSchurke.getAlias());
 
         ImageView imageView = listItemView.findViewById(R.id.icon);
         

@@ -30,7 +30,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         Bundle extras =getIntent().getExtras();
         if (extras != null) {
-            String nameValue = extras.getString("name");
+            String[] nameValue = extras.getStringArray("name");
             String aliasValue = extras.getString("alias");
             String universeValue = extras.getString("universe");
             String roleValue = extras.getString("role");
@@ -39,7 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
             String statusValue = extras.getString("status");
             int imageValue = extras.getInt("image");
 
-            name.setText(nameValue);
+            name.setText(String.join(", ", nameValue));
             alias.setText(aliasValue);
             universe.setText(universeValue);
             role.setText(roleValue);
@@ -48,7 +48,7 @@ public class DetailsActivity extends AppCompatActivity {
             hobby.setText(String.join(", ", hobbyValue));
             image.setImageResource(imageValue);
 
-            setTitle(nameValue);
+            setTitle(aliasValue);
         }
     }
 }

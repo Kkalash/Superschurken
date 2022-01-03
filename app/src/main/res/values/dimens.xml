@@ -2,4 +2,6 @@
 <resources>
 
     <dimen name="list_item_height">88dp</dimen>
+    <dimen name="lebel_width">100dp</dimen>
+    <dimen name="field_container_margin_top">25dp</dimen>
 </resources>

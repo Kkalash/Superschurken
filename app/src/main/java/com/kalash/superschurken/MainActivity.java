@@ -18,16 +18,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final ArrayList<Schurke> schurken = new ArrayList<>();
-        schurken.add(new Schurke("Bloodsport", "Mysterio", "Marvel Comics",
-                        "Techniker für Spezialeffekte Superschurke Illusionist",
-                        new String[] { "Spezialeffekte", "Hypnose", "Illusionen" },  new String[] { "Spezialeffekte kreieren" },
+        schurken.add(
+                new Schurke(new String[] { "Robert DuBois (ursprünglich)", "Alexander Trent (Nachfolger)" },
+                        "Bloodsport", "DC Comics","Handlanger Luthors Massenmörder",
+                        new String[] { "Herbeiteleportieren von Schusswaffen" },  new String[] { "Superman töten" },
                         "Verstorben", R.drawable.bloodsport));
-        schurken.add(new Schurke("Kobold", "Mysterio", "Marvel Comics",
-                        "Techniker für Spezialeffekte Superschurke Illusionist",
-                        new String[] { "Spezialeffekte", "Hypnose", "Illusionen" },  new String[] { "Spezialeffekte kreieren" },
-                        "Verstorben", R.drawable.kobold));
 
-        schurken.add(new Schurke("Quentin Beck", "Mysterio", "Marvel Comics",
+        schurken.add(new Schurke(new String[] { "Norman Osborn" }, "Der Kobold", "Spider-Man (2002)",
+                        "Wissenschaftler CEO von Oscorp",
+                        new String[] { "Übermenschliche Stärke", "High-Tech-Kampfgleiter", "Gepanzerte Flugrüstung", "Kobold-Granaten" },
+                        new String[] { "Forschen" },"Verstorben", R.drawable.kobold));
+
+        schurken.add(new Schurke(new String[] { "Quentin Beck" }, "Mysterio", "Marvel Comics",
                 "Techniker für Spezialeffekte Superschurke Illusionist",
                 new String[] { "Spezialeffekte", "Hypnose", "Illusionen" },  new String[] { "Spezialeffekte kreieren" },
                 "Verstorben", R.drawable.mysterio));

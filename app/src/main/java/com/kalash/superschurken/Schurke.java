@@ -4,7 +4,7 @@ package com.kalash.superschurken;
 // import android.os.Parcelable;
 
 public class Schurke {
-    private String mName;
+    private String[] mName;
     private String mAlias;
     private String mUniverse;
     private String mRole;
@@ -14,7 +14,7 @@ public class Schurke {
     private int mImageResourceId = NO_IMAGE_PROVIDED;
     private static final int NO_IMAGE_PROVIDED = -1;
 
-    public Schurke(String name,
+    public Schurke(String[] name,
                    String alias,
                    String universe,
                    String role,
@@ -44,7 +44,7 @@ public class Schurke {
 
     }*/
 
-    public String getName() { return mName; }
+    public String[] getName() { return mName; }
 
     public String getAlias() { return mAlias; }
 

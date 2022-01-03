@@ -37,7 +37,7 @@
 
             <TextView
                 android:id="@+id/name"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/lebel_width"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/name_value"
                 android:text="@string/name"
@@ -69,13 +69,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/name_container"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/field_container_margin_top"
             android:minHeight="35dp"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/alias"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/lebel_width"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/alias_value"
                 android:text="@string/alias"
@@ -105,13 +105,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/alias_container"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/field_container_margin_top"
             android:minHeight="35dp"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/universum"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/lebel_width"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/universum_value"
                 android:text="@string/universe"
@@ -143,13 +143,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/universum_container"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/field_container_margin_top"
             android:minHeight="35dp"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/rolle"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/lebel_width"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/rolle_value"
                 android:text="@string/role"
@@ -181,13 +181,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rolle_container"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/field_container_margin_top"
             android:minHeight="35dp"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/faehigkeiten"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/lebel_width"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/faehigkeiten_value"
                 android:text="@string/capabilities"
@@ -220,13 +220,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/faehigkeiten_container"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/field_container_margin_top"
             android:minHeight="35dp"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/hobby"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/lebel_width"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/hobby_value"
                 android:text="@string/hobby"
@@ -259,13 +259,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/hobby_container"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/field_container_margin_top"
             android:minHeight="35dp"
             app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/status"
-                android:layout_width="100dp"
+                android:layout_width="@dimen/lebel_width"
                 android:layout_height="wrap_content"
                 android:labelFor="@+id/status_value"
                 android:text="@string/status"
