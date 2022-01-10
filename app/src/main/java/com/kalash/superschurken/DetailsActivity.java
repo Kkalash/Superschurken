@@ -33,13 +33,13 @@ public class DetailsActivity extends AppCompatActivity {
         if (extras != null) {
             SuperSchurke superSchurke = extras.getParcelable("superSchurke");
 
-            name.setText(String.join(", ", superSchurke.getName()));
+            name.setText(superSchurke.getName());
             alias.setText(superSchurke.getAlias());
             universe.setText(superSchurke.getUniverse());
             role.setText(String.join(", ", superSchurke.getRole()));
-            status.setText(superSchurke.getStatus());
             capabilities.setText(String.join(", ", superSchurke.getCapabilities()));
             hobby.setText(String.join(", ", superSchurke.getHobby()));
+            status.setText(superSchurke.getStatus());
             image.setImageResource(superSchurke.getImageResourceId());
             weitereInfos.setText(superSchurke.getWeitereInfosLink());
 
