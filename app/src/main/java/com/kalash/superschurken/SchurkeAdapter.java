@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class SchurkeAdapter extends ArrayAdapter<Schurke> {
+public class SchurkeAdapter extends ArrayAdapter<SuperSchurke> {
 
-    public SchurkeAdapter(Context context, ArrayList<Schurke> schurken) {
+    public SchurkeAdapter(Context context, ArrayList<SuperSchurke> schurken) {
         super(context, 0, schurken);
     }
 
@@ -24,16 +24,16 @@ public class SchurkeAdapter extends ArrayAdapter<Schurke> {
                     R.layout.list_item, parent, false);
         }
 
-        final Schurke currentSchurke = getItem(position);
+        final SuperSchurke currentSuperSchurke = getItem(position);
 
         TextView schurkeTextView = listItemView.findViewById(R.id.schurke_text_view);
 
-        schurkeTextView.setText(currentSchurke.getAlias());
+        schurkeTextView.setText(currentSuperSchurke.getAlias());
 
         ImageView imageView = listItemView.findViewById(R.id.icon);
         
-        if (currentSchurke.hasImage()) {
-            imageView.setImageResource(currentSchurke.getImageResourceId());
+        if (currentSuperSchurke.hasImage()) {
+            imageView.setImageResource(currentSuperSchurke.getImageResourceId());
             imageView.setVisibility(View.VISIBLE);
         } else {
             imageView.setVisibility(View.GONE);

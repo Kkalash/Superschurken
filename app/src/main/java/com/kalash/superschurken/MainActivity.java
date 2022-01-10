@@ -2,8 +2,7 @@ package com.kalash.superschurken;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
+import android.os.Parcelable;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,19 +16,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final ArrayList<Schurke> schurken = new ArrayList<>();
+        final ArrayList<SuperSchurke> schurken = new ArrayList<>();
         schurken.add(
-                new Schurke(new String[] { "Robert DuBois (ursprünglich)", "Alexander Trent (Nachfolger)" },
+                new SuperSchurke(new String[] { "Robert DuBois (ursprünglich)", "Alexander Trent (Nachfolger)" },
                         "Bloodsport", "DC Comics","Handlanger Luthors Massenmörder",
                         new String[] { "Herbeiteleportieren von Schusswaffen" },  new String[] { "Superman töten" },
                         "Verstorben", R.drawable.bloodsport));
 
-        schurken.add(new Schurke(new String[] { "Norman Osborn" }, "Der Kobold", "Spider-Man (2002)",
+        schurken.add(new SuperSchurke(new String[] { "Norman Osborn" }, "Der Kobold", "Spider-Man (2002)",
                         "Wissenschaftler CEO von Oscorp",
                         new String[] { "Übermenschliche Stärke", "High-Tech-Kampfgleiter", "Gepanzerte Flugrüstung", "Kobold-Granaten" },
                         new String[] { "Forschen" },"Verstorben", R.drawable.kobold));
 
-        schurken.add(new Schurke(new String[] { "Quentin Beck" }, "Mysterio", "Marvel Comics",
+        schurken.add(new SuperSchurke(new String[] { "Quentin Beck" }, "Mysterio", "Marvel Comics",
                 "Techniker für Spezialeffekte Superschurke Illusionist",
                 new String[] { "Spezialeffekte", "Hypnose", "Illusionen" },  new String[] { "Spezialeffekte kreieren" },
                 "Verstorben", R.drawable.mysterio));
@@ -40,16 +39,10 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            Schurke item = (Schurke) parent.getItemAtPosition(position);
+            Parcelable item = (Parcelable) parent.getItemAtPosition(position);
             Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
-            intent.putExtra("name", item.getName());
-            intent.putExtra("alias", item.getAlias());
-            intent.putExtra("universe", item.getUniverse());
-            intent.putExtra("role", item.getRole());
-            intent.putExtra("capabilities", item.getCapabilities());
-            intent.putExtra("hobby", item.getHobby());
-            intent.putExtra("status", item.getStatus());
-            intent.putExtra("image", item.getImageResourceId());
+
+            intent.putExtra("superSchurke", item);
 
             startActivity(intent);
         });

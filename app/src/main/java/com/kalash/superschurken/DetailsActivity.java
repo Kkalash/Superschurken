@@ -28,27 +28,20 @@ public class DetailsActivity extends AppCompatActivity {
         status = findViewById(R.id.status_value);
         image = findViewById(R.id.image);
 
-        Bundle extras =getIntent().getExtras();
+        Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            String[] nameValue = extras.getStringArray("name");
-            String aliasValue = extras.getString("alias");
-            String universeValue = extras.getString("universe");
-            String roleValue = extras.getString("role");
-            String[] capabilitiesValue = extras.getStringArray("capabilities");
-            String[] hobbyValue = extras.getStringArray("hobby");
-            String statusValue = extras.getString("status");
-            int imageValue = extras.getInt("image");
+            SuperSchurke superSchurke = extras.getParcelable("superSchurke");
 
-            name.setText(String.join(", ", nameValue));
-            alias.setText(aliasValue);
-            universe.setText(universeValue);
-            role.setText(roleValue);
-            status.setText(statusValue);
-            capabilities.setText(String.join(", ", capabilitiesValue));
-            hobby.setText(String.join(", ", hobbyValue));
-            image.setImageResource(imageValue);
+            name.setText(String.join(", ", superSchurke.getName()));
+            alias.setText(superSchurke.getAlias());
+            universe.setText(superSchurke.getUniverse());
+            role.setText(superSchurke.getRole());
+            status.setText(superSchurke.getStatus());
+            capabilities.setText(String.join(", ", superSchurke.getCapabilities()));
+            hobby.setText(String.join(", ", superSchurke.getHobby()));
+            image.setImageResource(superSchurke.getImageResourceId());
 
-            setTitle(aliasValue);
+            setTitle(superSchurke.getAlias());
         }
     }
 }

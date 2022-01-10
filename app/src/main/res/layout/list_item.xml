@@ -34,7 +34,7 @@
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            tools:text="schurke" />
+            tools:text="superSchurke" />
 
         <ImageView
             android:layout_width="24dp"
