@@ -7,6 +7,7 @@
     <string name="capabilities">Fähigkeiten/Waffen</string>
     <string name="hobby">Hobby</string>
     <string name="status">Status</string>
+    <string name="weitere_infos">Weitere Infos</string>
     <string name="schurke_image_desc">Schurke-Bild</string>
     <string name="arrow_desc">Pfeil</string>
     <string name="no_value">None</string>

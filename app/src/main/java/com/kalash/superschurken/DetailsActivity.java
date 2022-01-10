@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class DetailsActivity extends AppCompatActivity {
 
-    TextView name, alias, universe, role, capabilities, hobby, status;
+    TextView name, alias, universe, role, capabilities, hobby, status, weitereInfos;
     ImageView image;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -27,6 +27,7 @@ public class DetailsActivity extends AppCompatActivity {
         hobby = findViewById(R.id.hobby_value);
         status = findViewById(R.id.status_value);
         image = findViewById(R.id.image);
+        weitereInfos = findViewById(R.id.weitere_infos_value);
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -35,11 +36,12 @@ public class DetailsActivity extends AppCompatActivity {
             name.setText(String.join(", ", superSchurke.getName()));
             alias.setText(superSchurke.getAlias());
             universe.setText(superSchurke.getUniverse());
-            role.setText(superSchurke.getRole());
+            role.setText(String.join(", ", superSchurke.getRole()));
             status.setText(superSchurke.getStatus());
             capabilities.setText(String.join(", ", superSchurke.getCapabilities()));
             hobby.setText(String.join(", ", superSchurke.getHobby()));
             image.setImageResource(superSchurke.getImageResourceId());
+            weitereInfos.setText(superSchurke.getWeitereInfosLink());
 
             setTitle(superSchurke.getAlias());
         }
